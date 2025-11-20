@@ -1,0 +1,22 @@
+{
+  "name": "frontend-tailwind-pwa-chatbot",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "tailwindcss": "^3.4.0",
+    "postcss": "^8.4.35",
+    "autoprefixer": "^10.4.20",
+    "vite-plugin-pwa": "^0.15.0",
+    "@vitejs/plugin-react": "^4.0.0"
+  }
+}

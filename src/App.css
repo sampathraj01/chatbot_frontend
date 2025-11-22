@@ -1,0 +1,101 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', sans-serif; background: #0f0f23; }
+
+.App {
+  max-width: 500px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #1e1b4b;
+  color: white;
+}
+
+.header {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.messages {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.message {
+  max-width: 80%;
+  align-self: flex-start;
+}
+
+.message.user { align-self: flex-end; }
+
+.bubble {
+  padding: 12px 18px;
+  border-radius: 20px;
+  background: #6366f1;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.message.user .bubble {
+  background: #8b5cf6;
+}
+
+.offline { background: #ef4444 !important; }
+
+.typing span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ccc;
+  margin: 0 4px;
+  animation: bounce 1.4s infinite;
+}
+
+.typing span:nth-child(2) { animation-delay: 0.2s; }
+.typing span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.input-form {
+  display: flex;
+  padding: 1rem;
+  background: #1e1b4b;
+  border-top: 1px solid #444;
+  gap: 10px;
+}
+
+.input-form input {
+  flex: 1;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 30px;
+  background: #333;
+  color: white;
+  font-size: 16px;
+}
+
+.input-form button {
+  padding: 0 24px;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
